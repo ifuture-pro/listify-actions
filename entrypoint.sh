@@ -5,7 +5,7 @@
 
 echo ${INPUT_LISTIFY}
 
-COMMIT_MESSAGE = $(curl -s https://api.github.com/repos/ifuture-pro/listify-actions/commits/$GITHUB_SHA |grep jq '.commit.message') && \
+COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/ifuture-pro/listify-actions/commits/$GITHUB_SHA | jq '.commit.message')" && \
 
 if [ "$COMMIT_MESSAGE" -eq "listify Auto" ] ; then
   echo "listify auto push. Ignore" && \

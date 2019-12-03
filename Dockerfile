@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:12-alpine
 
 LABEL "maintainer"="ifuture-pro <business@ifuture.pro>"
 LABEL "repository"="http://github.com/ifuture-pro/listify-actions"
@@ -11,6 +11,6 @@ LABEL "com.github.actions.color"="blue"
 
 RUN npm install @ifuture/listify -g
 
-COPY entrypoint.sh ./entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

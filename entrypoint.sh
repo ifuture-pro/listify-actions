@@ -3,7 +3,7 @@
 #set -e
 
 
-echo '${INPUT.LISTIFY}'
+echo ${INPUT_LISTIFY}
 
 listify ./ && \
 

@@ -11,6 +11,8 @@ LABEL "com.github.actions.color"="blue"
 
 RUN npm install @ifuture/listify -g
 
+RUN apk add --update curl
+
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x entrypoint.sh

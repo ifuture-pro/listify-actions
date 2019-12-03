@@ -1,3 +1,4 @@
+name: Build Test
 on: [push]
 
 jobs:
@@ -5,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     name: listify auto
     steps:
-
     - name: Checkout
       uses: actions/checkout@v1
     - name: listify action step

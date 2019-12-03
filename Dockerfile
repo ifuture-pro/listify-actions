@@ -11,6 +11,6 @@ LABEL "com.github.actions.color"="blue"
 
 RUN npm install @ifuture/listify -g
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh ./entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]

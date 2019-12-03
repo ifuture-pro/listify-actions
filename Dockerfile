@@ -11,7 +11,8 @@ LABEL "com.github.actions.color"="blue"
 
 RUN npm install @ifuture/listify -g
 
-RUN apk add --update curl
+RUN apk add --update curl jq
+# && rm -rf /var/cache/apk/*
 
 COPY entrypoint.sh /entrypoint.sh
 

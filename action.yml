@@ -1,0 +1,12 @@
+name: 'listify-actions'
+description: 'Generate and merge all directories to the specified file.'
+inputs:
+  listify:  # id of input
+    description: 'listify config file'
+    required: true
+    default: './listify.yml'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.listify }}

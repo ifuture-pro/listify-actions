@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  listify-auto:
+    runs-on: ubuntu-latest
+    name: listify auto
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: listify action step
+      uses: ./
+      with:
+        listify: bin/listify.yml

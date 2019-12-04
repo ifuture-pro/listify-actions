@@ -8,11 +8,9 @@ INPUT_BRANCH=${INPUT_BRANCH:-master}
 INPUT_FORCE=${INPUT_FORCE:-false}
 REPOSITORY=${INPUT_REPOSITORY:-$GITHUB_REPOSITORY}
 AUTO_COMMIT_MSG="listify Auto"
-COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/${GITHUB_ACTOR}/${GITHUB_REPOSITORY}/commits/$GITHUB_SHA | jq '.commit.message' | sed 's/\"//g')"
+COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/${REPOSITORY}/commits/$GITHUB_SHA | jq '.commit.message' | sed 's/\"//g')"
 
-echo "latest commit is : ${COMMIT_MESSAGE}"
-echo ${GITHUB_ACTOR}
-echo ${GITHUB_REPOSITORY}
+echo "latest commit : ${COMMIT_MESSAGE}"
 
 if [[ "$COMMIT_MESSAGE" == "$AUTO_COMMIT_MSG" ]] ; then
     echo "listify auto push. Ignore"

@@ -12,3 +12,4 @@ jobs:
       uses: ./
       with:
         listify: bin/listify.yml
+        github_token: ${{ secrets.GH_TOKEN }}

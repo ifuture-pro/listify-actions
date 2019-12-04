@@ -26,7 +26,7 @@ fi
 
 REMOTE_REPO="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-APPEND=$("${LISTIFY_CMD}")
+APPEND=$(${LISTIFY_CMD})
 
 echo $APPEND
 

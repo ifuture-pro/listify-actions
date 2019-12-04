@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> When you push document . It will generate list of contents to specified file.
+> When you push document . It will generate list of contents to specified file.  
 > Auto generate table of contents  
 > Generate and merge all directories to the specified file.
 

@@ -26,7 +26,9 @@ fi
 
 REMOTE_REPO="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-$("${LISTIFY_CMD}")
+APPEND=$("${LISTIFY_CMD}")
+
+echo $APPEND
 
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"

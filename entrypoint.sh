@@ -11,6 +11,8 @@ AUTO_COMMIT_MSG="listify Auto"
 COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/${GITHUB_ACTOR}/${GITHUB_REPOSITORY}/commits/$GITHUB_SHA | jq '.commit.message' | sed 's/\"//g')"
 
 echo "latest commit is : ${COMMIT_MESSAGE}"
+echo ${GITHUB_ACTOR}
+echo ${GITHUB_REPOSITORY}
 
 if [[ "$COMMIT_MESSAGE" == "$AUTO_COMMIT_MSG" ]] ; then
     echo "listify auto push. Ignore"

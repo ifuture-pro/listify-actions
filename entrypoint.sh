@@ -10,6 +10,8 @@ AUTO_COMMIT_MSG="listify Auto"
 COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/${REPOSITORY}/commits/$GITHUB_SHA | jq '.commit.message' | sed 's/\"//g')"
 LISTIFY_CMD="listify ${INPUT_LISTIFY:-./}"
 
+echo "listify command : ${LISTIFY_CMD}"
+
 echo "latest commit : ${COMMIT_MESSAGE}"
 
 if [[ "$COMMIT_MESSAGE" == "$AUTO_COMMIT_MSG" ]] ; then

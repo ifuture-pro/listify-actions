@@ -6,7 +6,7 @@ LABEL "homepage"="http://github.com/ifuture-pro/listify-actions"
 
 LABEL "com.github.actions.name"="Listify Auto"
 LABEL "com.github.actions.description"="Generate and merge all directories to the specified file.List of contents"
-LABEL "com.github.actions.icon"="upload-cloud"
+LABEL "com.github.actions.icon"="align-left"
 LABEL "com.github.actions.color"="blue"
 
 RUN npm install @ifuture/listify -g

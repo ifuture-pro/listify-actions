@@ -22,6 +22,7 @@ if [ -z "$(git status --porcelain)" ]; then
     echo "Nothing to commit"
     exit 0
 fi
+git config --list
 git add .
 git commit -m "${AUTO_COMMIT_MSG}"
 git push

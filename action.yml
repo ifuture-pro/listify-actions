@@ -1,7 +1,9 @@
 name: 'listify-actions'
 description: 'Generate and merge all directories to the specified file.'
+icon: 'align-left'
+color: 'blue'
 inputs:
-  listify:  # id of input
+  listify:
     description: 'listify config file'
     required: true
     default: './listify.yml'

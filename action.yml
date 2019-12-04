@@ -1,8 +1,12 @@
 name: 'listify-actions'
 description: 'Generate and merge all directories to the specified file.'
-icon: align-left
-color: blue
+author: 'zzz'
+branding:
+  icon: 'align-left'
+  color: 'blue'
 inputs:
+  github_token:
+    required: true
   listify:
     description: 'listify config file'
     required: true

@@ -11,5 +11,5 @@ jobs:
     - name: listify action step
       uses: ./
       with:
-        listify: bin/listify.yml
+        listify: ./ --blog
         github_token: ${{ secrets.GH_TOKEN }}

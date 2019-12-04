@@ -3,12 +3,12 @@
 set -e
 
 
-echo ${INPUT_LISTIFY}
 INPUT_BRANCH=${INPUT_BRANCH:-master}
 INPUT_FORCE=${INPUT_FORCE:-false}
 REPOSITORY=${INPUT_REPOSITORY:-$GITHUB_REPOSITORY}
 AUTO_COMMIT_MSG="listify Auto"
 COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/${REPOSITORY}/commits/$GITHUB_SHA | jq '.commit.message' | sed 's/\"//g')"
+LISTIFY_CMD="listify ${INPUT_LISTIFY:-./}"
 
 echo "latest commit : ${COMMIT_MESSAGE}"
 
@@ -24,9 +24,7 @@ fi
 
 REMOTE_REPO="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-echo $REMOTE_REPO
-
-listify ./
+$("${LISTIFY_CMD}")
 
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"

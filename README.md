@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Listify-actions 👋</h1>
+<h1 align="center">Welcome to listify-actions 👋</h1>
 <p align="center">
     <a href="https://github.com/ifuture-pro/listify-actions/actions" target="_blank">
     <img alt="Version" src="https://github.com/ifuture-pro/listify-actions/workflows/Build%20Test/badge.svg">
@@ -19,7 +19,12 @@
 > Generate and merge all directories to the specified file.
 
 ## Usage
-```workflows.yml
+
+### `workflow.yml` Example
+Place in a `.yml` file such as this one in your `.github/workflows` folder.   
+Refer to the [documentation](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions) on workflow YAML syntax here.
+
+```yaml
 name: Auto directories
 
 on: [push]
@@ -32,12 +37,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: listify-actions
-      uses: ifuture-pro/listify-actions@v0.1.0
+      uses: ifuture-pro/listify-actions@v0.1.1
       with:
         listify: ./ --blog
         github_token: ${{ secrets.GH_TOKEN }}
 
 ```
+
+### Variables
+* `listify`: [Listify options](https://github.com/ifuture-pro/listify#usage) line
+* `github_token`: When directory generate completed. Push it to you repository.
+
 
 
 

@@ -6,7 +6,7 @@ set -e
 INPUT_BRANCH=${INPUT_BRANCH:-master}
 INPUT_FORCE=${INPUT_FORCE:-false}
 REPOSITORY=${INPUT_REPOSITORY:-$GITHUB_REPOSITORY}
-AUTO_COMMIT_MSG="listify Auto"
+AUTO_COMMIT_MSG=${INPUT_COMMIT_MSG:-"listify Actions automatic https://github.com/ifuture-pro/listify-actions"}
 COMMIT_MESSAGE="$(curl -s https://api.github.com/repos/${REPOSITORY}/commits/$GITHUB_SHA | jq '.commit.message' | sed 's/\"//g')"
 LISTIFY_CMD="listify ${INPUT_LISTIFY:-./}"
 

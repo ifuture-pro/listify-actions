@@ -11,6 +11,9 @@ inputs:
     description: 'listify options'
     required: false
     default: './'
+  commit_msg:
+    description: 'commit message'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

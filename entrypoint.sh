@@ -29,11 +29,12 @@ REMOTE_REPO="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITO
 
 APPEND=$(${LISTIFY_CMD})
 
-echo $APPEND
-
 cd ${INPUT_DIRECTORY}
 
 pwd
+
+echo $APPEND
+
 
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"

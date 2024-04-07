@@ -33,7 +33,9 @@ cd ${INPUT_DIRECTORY}
 
 pwd
 
-echo $APPEND
+echo "INPUT_DIRECTORY : ${INPUT_DIRECTORY}"
+
+echo "APPEND : ${APPEND}"
 
 
 git config user.name "${GITHUB_ACTOR}"

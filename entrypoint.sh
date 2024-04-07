@@ -27,7 +27,7 @@ fi
 
 REMOTE_REPO="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-git pull ${REMOTE_REPO}
+git pull https://github.com/${REPOSITORY}
 
 APPEND=$(${LISTIFY_CMD})
 

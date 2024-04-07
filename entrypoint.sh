@@ -27,15 +27,17 @@ fi
 
 REMOTE_REPO="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
+git pull ${REMOTE_REPO}
+
 APPEND=$(${LISTIFY_CMD})
 
 cd ${INPUT_DIRECTORY}
 
 pwd
 
-echo "INPUT_DIRECTORY : ${INPUT_DIRECTORY}"
+echo "INPUT_DIRECTORY value: ${INPUT_DIRECTORY}"
 
-echo "APPEND : ${APPEND}"
+echo "APPEND value: ${APPEND}"
 
 
 git config user.name "${GITHUB_ACTOR}"

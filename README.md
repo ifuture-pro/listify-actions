@@ -34,10 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     name: listify auto
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
     - name: listify-actions
-      uses: ifuture-pro/listify-actions@v0.1.1
+      uses: ifuture-pro/listify-actions@master
       with:
         listify: ./ --blog
         github_token: ${{ secrets.GH_TOKEN }}
